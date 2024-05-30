@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim Form Request - TEMPLATE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="./assets/horae.webp" alt="Brand Logo" class="logo">
+        </div>
+        <h1>Request Your Watch Passport ⌚</h1>
+        <form id="claimForm">
+            <div class="form-group">
+                <label for="serialNumber"><b>Serial Number:</b></label>
+                <input type="text" id="serialNumber" name="serialNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="claimCode"><b>Claim Code (Optional):</b></label>
+                <input type="text" id="claimCode" name="claimCode">
+            </div>
+            <div class="form-group">
+                <label for="email"><b>Your Email:</b></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <button type="submit" class="btn"><b>Request Passport</b><div class="loader" hidden></div></button>
+            <div id="statusMessage" class="status-message"></div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

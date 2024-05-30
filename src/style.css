@@ -1,0 +1,124 @@
+:root {
+    --primary-color: rgb(87, 83, 78); /* Dark greyish brown */
+    --secondary-color: #fff; /* White */
+    --accent-color: rgb(219, 188, 151); /* Beige */
+    --font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--primary-color);
+    color: var(--primary-color);
+    padding: 20px;
+    margin: 0;
+    font-size: 16px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--secondary-color);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    border-radius: 5px;
+}
+
+.logo-container {
+    display: inline-block;
+    background-color: var(--primary-color);
+    border-radius: 5px;  /* Adjust to soften the corners */
+    padding: 15px; /* Adjust this padding to make the background larger than the logo */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    margin-bottom: 20px;
+    /* Optional: adjust width and height if you want specific dimensions for the background */
+    width: auto; /* Adjust this as needed */
+    height: auto; /* Adjust this as needed */
+    overflow: hidden; /* Ensures no overflow of the content */
+}
+
+.logo {
+    width: 200px; /* Set the logo size */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures the logo fits neatly inside the container */
+}
+
+
+.form-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: calc(100% - 20px); /* Adjust width to prevent overflow */
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box; /* Ensures padding does not affect the size */
+}
+
+button {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 100%; /* Ensure button fills the form width */
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.loader {
+    border: 4px solid rgba(255, 255, 255, 0.3); /* Light grey */
+    border-top: 4px solid #fff; /* White */
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+    display: inline-block; /* affiché en ligne avec le texte du bouton */
+    vertical-align: middle;
+    margin-left: 5px;
+    visibility: hidden; /* initialement caché */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+/* API RETURN */
+
+.status-message {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff; /* Text color white for visibility */
+    opacity: 0; /* Start with the div being completely transparent */
+    display: none; /* Hidden by default */
+    transition: opacity 0.7s ease; /* Smooth transition for opacity */
+}
+
+.status-success {
+    background-color: rgba(0, 128, 0, 0.8); /* Green for success with transparency */
+}
+
+.status-warning {
+    background-color: rgba(255, 165, 0, 0.8); /* Orange for warning with transparency */
+}
+
+.status-error {
+    background-color: rgba(255, 0, 0, 0.8); /* Red for error with transparency */
+}

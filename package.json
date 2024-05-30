@@ -1,0 +1,12 @@
+{
+    "name": "horae-sdk-brand-claim-frontend",
+    "version": "1.0.0",
+    "description": "Local server for testing the Horae claim form",
+    "scripts": {
+      "start": "http-server src -p 8000"
+    },
+    "devDependencies": {
+      "http-server": "latest"
+    }
+}
+  
